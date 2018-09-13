@@ -1,6 +1,6 @@
 # Pokéclic
 
-Através desse desafio, queremos conhecer suas habildades de desenvolvimento e principalmente como você resolve problemas.
+Através desse desafio, queremos conhecer suas habilidades de desenvolvimento e principalmente como você resolve problemas.
 
 O objetivo desse desafio é construir uma pokédex. O app deve acessar a api  [POKÉMON TCG](https://pokemontcg.io/) e seguir os mockups abaixo:
 
