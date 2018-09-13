@@ -2,7 +2,7 @@
 
 Através desse desafio, queremos conhecer suas habilidades de desenvolvimento e principalmente como você resolve problemas.
 
-O objetivo desse desafio é construir uma pokédex. O app deve acessar a api  [POKÉMON TCG](https://pokemontcg.io) e seguir os mockups abaixo:
+O objetivo desse desafio é construir uma pokédex. O app deve acessar a api  [POKÉMON TCG](https://pokemontcg.io/) e seguir os mockups abaixo:
 
 ![Mockup 1](https://image.ibb.co/hFhzX9/mockup_pokemon.png)
 ![Mockup 2](https://image.ibb.co/b1HNkU/mockup_details.png)
