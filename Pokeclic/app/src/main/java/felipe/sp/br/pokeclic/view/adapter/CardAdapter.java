@@ -71,7 +71,7 @@ public class CardAdapter extends RecyclerView.Adapter  {
 
         private void preencher(Card card){
             cardId = card.getId();
-            tvPoke.setText(card.getName());
+            tvPoke.setText(card.getName().replace("-EX","").replace("ex",""));
         }
 
         @Override

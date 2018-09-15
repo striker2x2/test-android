@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.ContextThemeWrapper;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -27,6 +28,7 @@ public class CardActivity extends AppCompatActivity {
 
     private Button btnInfo;
     private ImageView imgCard;
+    private ImageButton imgBack;
     private String id;
     private TextView tvNomeCard;
     private ProgressBar progressBar;
@@ -41,6 +43,7 @@ public class CardActivity extends AppCompatActivity {
         imgCard = findViewById(R.id.img_card);
         tvNomeCard = findViewById(R.id.toolbar_card_name);
         progressBar = findViewById(R.id.pgr_card);
+        imgBack = findViewById(R.id.btn_back1);
 
         mostraViews(false);
 
@@ -56,6 +59,8 @@ public class CardActivity extends AppCompatActivity {
 
         }
 
+        //voltar para a tela inicial
+        volta();
 
     }
 
@@ -121,6 +126,16 @@ public class CardActivity extends AppCompatActivity {
         }
     }
 
+    public void volta(){
+        imgBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                finish();
+            }
+        });
+    }
+
     public void moreInfo(final Card card){
 
 
@@ -129,7 +144,7 @@ public class CardActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String msg;
                 if(card.getSupertype().equals("Pokémon")){
-                    msg = "Esse Pokémon possui "+ card.getHp() + " de HP e Seu Numero da pokedex é "
+                    msg = "Esse Pokémon possui "+ card.getHp() + " de HP e Seu número da pokédex é "
                             + card.getNationalPokedexNumber() + ".";
                 }else if(card.getSupertype().equals("Trainer")){
                     msg = card.getText().get(0);
