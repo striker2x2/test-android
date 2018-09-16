@@ -1,9 +1,15 @@
 package felipe.sp.br.pokeclic.view;
 
+import android.content.DialogInterface;
+import android.graphics.drawable.ColorDrawable;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.ContextThemeWrapper;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
@@ -65,5 +71,48 @@ public class MainActivity extends AppCompatActivity {
                 barraProgresso.showProgress(true,pgrCards);
             }
         });
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main,menu);
+
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int idBtn = item.getItemId();
+        if (idBtn == R.id.btn_exit){
+
+            //Cria o Builder do dialogo de MSG
+            AlertDialog.Builder builder = new AlertDialog.Builder(new ContextThemeWrapper(this, R.style.myDialog));
+
+            builder.setMessage("Deseja mesmo Sair")
+                    .setTitle(getString(R.string.sair));
+
+            // Cria botão sim
+            builder.setPositiveButton("Sim", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int id) {
+
+                    finish();
+
+                }
+            });
+            //cria botão não
+            builder.setNegativeButton("Não", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int id) {
+                    // se cancelar volta pra tela de exclusão
+                }
+            });
+            AlertDialog dialog = builder.create();
+
+            // Mostra o Dialog
+            dialog.show();
+            dialog.getWindow().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.colorWhite)));
+
+        }
+
+        return true;
     }
 }

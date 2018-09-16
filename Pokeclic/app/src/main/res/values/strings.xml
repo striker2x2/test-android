@@ -4,4 +4,5 @@
     <string name="falhaImagem">Falha ao carregar Imagem</string>
     <string name="moreInfo">MORE INFO</string>
     <string name="title_activity_card">CardActivity</string>
+    <string name="sair">Sair</string>
 </resources>

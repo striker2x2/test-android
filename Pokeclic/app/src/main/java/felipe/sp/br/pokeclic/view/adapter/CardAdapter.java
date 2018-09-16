@@ -49,7 +49,6 @@ public class CardAdapter extends RecyclerView.Adapter  {
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
         Card card = listaCards.get(position);
 
-
         ((PokemonViewHolder) holder).preencher(card);
     }
 

@@ -144,7 +144,7 @@ public class CardActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String msg;
                 if(card.getSupertype().equals("Pokémon")){
-                    msg = "Esse Pokémon possui "+ card.getHp() + " de HP e Seu número da pokédex é "
+                    msg = "Esse Pokémon possui "+ card.getHp() + " de HP e seu número da pokédex é "
                             + card.getNationalPokedexNumber() + ".";
                 }else if(card.getSupertype().equals("Trainer")){
                     msg = card.getText().get(0);
